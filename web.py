@@ -9,8 +9,8 @@ def get_description(url):
         page = urlopen(url)
         html = page.read().decode("utf-8")
         soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article", "cms-content").get_text()
-        print(article)
+        discription = soup.find("article", "cms-content").get_text()
+        print(discription)
     except:
         print(Fore.RED + f"Cannot access: {url}\n" + Fore.RESET)
     
